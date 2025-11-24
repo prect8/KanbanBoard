@@ -4,6 +4,8 @@ import { CreateBoardDialog } from "@/components/dashboard/create-board-dialog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatDistanceToNow } from "date-fns";
 
+export const dynamic = 'force-dynamic';
+
 export default async function DashboardPage() {
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
